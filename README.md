@@ -14,6 +14,12 @@ This repository contains a Databricks notebook that demonstrates how to build a 
 - Azure Data Lake Storage Gen2
 - Python / PySpark
 
+## Requirements
+- Databricks Runtime 12+ with Delta Lake enabled
+- Access to an Event Hubs namespace & hub
+- Access to ADLS Gen2 (container + path permissions)
+- (Optional) `azure-eventhub` Python package if you use the sample event generator
+
 ## How to Use
 
 1. **Deploy prerequisites:**
@@ -43,13 +49,19 @@ This repository contains a Databricks notebook that demonstrates how to build a 
 ## Example Gold Table Output
 
 | window_start       | window_end         | site      | device_id | avg_temperature | avg_humidity | reading_count |
-|-------------------|-------------------|-----------|-----------|----------------|--------------|---------------|
-| 2025-08-20 20:00  | 2025-08-20 20:01  | ams       | dev-1     | 22.5           | 0.45         | 12            |
-| 2025-08-20 20:00  | 2025-08-20 20:01  | rotterdam | dev-3     | 24.1           | 0.38         | 15            |
+|-------------------|--------------------|-----------|-----------|-----------------|--------------|---------------|
+| 2025-08-20 20:00  | 2025-08-20 20:01   | ams       | dev-1     | 22.5            | 0.45         | 12            |
+| 2025-08-20 20:00  | 2025-08-20 20:01   | rotterdam | dev-3     | 24.1            | 0.38         | 15            |
 
 ## Sample Data
-
 If you want to test without Event Hubs, you can use the provided sample data in `sample_data.json` and load it into the Bronze layer manually.
 
----
+## Security Notes
+- Do **not** commit your Event Hubs connection string to the repo. Use Databricks **Secret Scopes** or environment variables.
+- Use separate checkpoint locations per stream (Bronze/Silver/Gold) to avoid state conflicts.
 
+## Portfolio Notes
+This project is designed to be showcased in interviews:
+- Demonstrates **real-time streaming** with Databricks.
+- Shows knowledge of the **Medallion (Bronze/Silver/Gold) pattern**.
+- Covers **event-driven architecture** with Azure.

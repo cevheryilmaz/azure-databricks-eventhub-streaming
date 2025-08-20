@@ -1,23 +1,5 @@
 [
-  {
-    "deviceId": "dev-1",
-    "site": "amsterdam",
-    "temperature": 22.5,
-    "humidity": 0.45,
-    "ts": 1724175600
-  },
-  {
-    "deviceId": "dev-2",
-    "site": "utrecht",
-    "temperature": 23.1,
-    "humidity": 0.50,
-    "ts": 1724175660
-  },
-  {
-    "deviceId": "dev-3",
-    "site": "rotterdam",
-    "temperature": 25.0,
-    "humidity": 0.40,
-    "ts": 1724175720
-  }
+  {"deviceId":"dev-1","site":"ams","temperature":22.5,"humidity":0.45,"ts":1724175600},
+  {"deviceId":"dev-2","site":"utrecht","temperature":23.1,"humidity":0.50,"ts":1724175660},
+  {"deviceId":"dev-3","site":"rotterdam","temperature":25.0,"humidity":0.40,"ts":1724175720}
 ]
