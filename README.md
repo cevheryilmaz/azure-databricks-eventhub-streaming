@@ -51,10 +51,5 @@ This repository contains a Databricks notebook that demonstrates how to build a 
 
 If you want to test without Event Hubs, you can use the provided sample data in `sample_data.json` and load it into the Bronze layer manually.
 
-## Portfolio Notes
-This project is designed to be showcased in interviews:
-- Demonstrates **real-time streaming** with Databricks.
-- Shows knowledge of the **Medallion (Bronze/Silver/Gold) pattern**.
-- Covers **event-driven architecture** with Azure.
-
 ---
+
