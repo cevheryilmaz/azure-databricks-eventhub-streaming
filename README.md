@@ -28,7 +28,7 @@ This repository contains a Databricks notebook that demonstrates how to build a 
    - Mount ADLS Gen2 to Databricks (or use `abfss://` URIs).
 
 2. **Import notebook:**
-   - Upload `Azure_Databricks_EventHubs_Medallion.ipynb` into your Databricks workspace.
+   - Upload `azure-databricks-eventhub-streaming.ipynb` into your Databricks workspace.
 
 3. **Configure parameters:**
    - Fill in widgets at the top of the notebook:
@@ -59,5 +59,6 @@ If you want to test without Event Hubs, you can use the provided sample data in 
 ## Security Notes
 - Do **not** commit your Event Hubs connection string to the repo. Use Databricks **Secret Scopes** or environment variables.
 - Use separate checkpoint locations per stream (Bronze/Silver/Gold) to avoid state conflicts.
+
 
 
