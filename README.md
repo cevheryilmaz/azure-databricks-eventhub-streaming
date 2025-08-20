@@ -60,8 +60,4 @@ If you want to test without Event Hubs, you can use the provided sample data in 
 - Do **not** commit your Event Hubs connection string to the repo. Use Databricks **Secret Scopes** or environment variables.
 - Use separate checkpoint locations per stream (Bronze/Silver/Gold) to avoid state conflicts.
 
-## Portfolio Notes
-This project is designed to be showcased in interviews:
-- Demonstrates **real-time streaming** with Databricks.
-- Shows knowledge of the **Medallion (Bronze/Silver/Gold) pattern**.
-- Covers **event-driven architecture** with Azure.
+
